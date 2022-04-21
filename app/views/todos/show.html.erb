@@ -4,3 +4,6 @@
 <p> description: <%= @todo.description %> </p>
 <td> <%= link_to "Edit this Todo", edit_todo_path(@todo) %> </td>
 <td> <%= link_to "Back to list", todos_path %> </td>
+<td><%= link_to "Delete", todo_path(@todo),
+                    data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %> 
+            </td>
